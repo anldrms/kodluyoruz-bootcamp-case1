@@ -3,7 +3,7 @@
 
 ## Case 1.1 Sanal makinada bir Centos kurup, güncellemelerinin yapılması <h2>
 
-Bu islemde Oracle Virtual Box üzerinde bir sanal makine ayağa kaldıracağım.
+Bu islemde Oracle Virtual Box üzerinde bir sanal makine ayağa kaldırılacaktır.
 
 ### İzlenecek adım <h3>
     Yeni > Sanal Makine Oluştur > ad: centos-case dizin C:\Users\abdurmus\VirtualBox VMs Türü:Linux Sürüm Red Hat 64 Bit > İleri 
@@ -94,7 +94,7 @@ Sonrasında ilgili dosya içersine girerek merhaba trendyol yazdıralım
 
     sudo nano /opt/bootcamp/bootcamp.txt
 
-_ Yazım sonrası CTRL+X kombinasyonuna Y ile kaydedip çıkabiliriz. _ 
+ _Yazım sonrası CTRL+X kombinasyonuna Y ile kaydedip çıkabiliriz._
 
 ## Case 1.5 Kişisel kullanıcının home dizininde tek bir komut kullanarak bootcamp.txt file'ını bulup, bootcamp diskine taşınması <h2>
 
