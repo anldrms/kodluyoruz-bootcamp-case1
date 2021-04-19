@@ -31,11 +31,11 @@ Installation kısmında
 >Root şifremizi bu adımda belirleyebiliriz.
 >İstersek kullanıcıda oluşturabiliriz fakat bu adımı makinede elle yapacağız.
 
-Ve kurulum işlemi tamamlandıktan sonra reboot komutu ile sunucumuzu yeniden başlatalım. Tebrikler Centos kurulumunu bitirdik!
+Ve kurulum işlemi tamamlandıktan sonra reboot komutu ile sunucumuzu yeniden başlatalım. **Tebrikler Centos kurulumunu bitirdik!**
 
 Açılış sonra login : root ve password'e belirlediğimiz 
 
-sonrasında ;
+Sonrasında ;
 
     sudo yum update
 
@@ -44,7 +44,7 @@ komutu ile gerekli güncelleştirmeler yapılır. -y parametresi sona eklendiği
 
 ## Case 1.2 Kişisel bir user yaratılması (ad.soyad şeklinde) Not: aşağıdaki işlemler bu kullanıcı ile yapılacak <h2>
 
-Aşağıdaki komutları sırasıyla ilerleyelim 
+Aşağıdaki komutları sırasıyla ilerleyelim.
 
     adduser abdurmus
     passwd abdurmus
@@ -62,7 +62,7 @@ Aşağıdaki komutları sırasıyla ilerleyelim
 >Adımlarını izleyerek 10 GB ek VDI alanı ekliyoruz.
 >Ardından makineyi tekrar başlatıyoruz.
 
-Aşağıdaki komutları sırasıyla ilerleyelim 
+Aşağıdaki komutları sırasıyla ilerleyelim .
 
     fdisk -l
     mkfs.ext3 /dev/sdb
@@ -71,7 +71,7 @@ Aşağıdaki komutları sırasıyla ilerleyelim
 
 >İlk olarak diskimize bağlı mount alanlarını inceleyip sonrasında /dev/sdb altında yeni bağladığımız diski görelim.
 >Sonrasında ilgili alanı formatlayalım.
->Ardından mount edeceğimiz bootcamp alanını oluşturalım
+>Ardından mount edeceğimiz bootcamp alanını oluşturalım.
 >Sonrasında ilgili alanı /dev/sdb ye mount etme işlemini yapalım.
 
 Bu adımda ek olarak yapmamız gerekenler;
@@ -90,7 +90,7 @@ Burada mkdir ve -p parametresini ve touch komutunu kullanarak tek satırda gerek
     sudo mkdir -p /opt/bootcamp/ && sudo touch /opt/bootcamp/bootcamp.txt
 
 
-Sonrasında ilgili dosya içersine girerek merhaba trendyol yazdıralım
+Sonrasında ilgili dosya içersine girerek merhaba trendyol yazdıralım.
 
     sudo nano /opt/bootcamp/bootcamp.txt
 
@@ -98,7 +98,7 @@ Sonrasında ilgili dosya içersine girerek merhaba trendyol yazdıralım
 
 ## Case 1.5 Kişisel kullanıcının home dizininde tek bir komut kullanarak bootcamp.txt file'ını bulup, bootcamp diskine taşınması <h2>
 
-Burada ise find komutu ile bulma işlemini mv komutu ilede taşıma işlemini yürütücez
+Burada ise find komutu ile bulma işlemini mv komutu ilede taşıma işlemini yürüteceğiz.
 
     sudo find / -iname bootcamp.txt -exec mv {} /bootcamp/ \;
 >Burada ilk olarak find komutu root dizini altında bootcamp.txt dosyasını buluyor ardıdan -exec parametresi ile mv komutu ise bulduğumuz dosyayı /bootcamp altına gönderiyor.
