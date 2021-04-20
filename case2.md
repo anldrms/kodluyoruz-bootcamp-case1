@@ -31,5 +31,13 @@ Sonrasında ise öncelikle Docker kurulumu için gerekli olan playbookumuzu yaza
 
 
 >Oluşturduğumuz dosyayı aşağıdaki komuyla çalıştıralım.
+
     ansible-playbook docker_kurulum.yaml
 ![alt tag](https://cloudflare-ipfs.com/ipfs/QmdQnxWiYG5i68xyhRVp4E2x5yG3LPRsajbaZiUyo9q2Yo)
+
+Docker kurulumunu tamamladık şimdi kontrol amaçlı docker servisine bakalım.
+
+    systemctl status docker
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmcvTaVMZXZdxmP4Usu2SE3J1uRfz4df6RdFbQRSDBkbKi)
+
