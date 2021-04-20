@@ -27,4 +27,9 @@ Sonrasında ise öncelikle Docker kurulumu için gerekli olan playbookumuzu yaza
 
     vim docker_kurulum.yaml
 >Yaml dosyamız aşağıdaki şekilde yazılacaktır.
-![alt tag](https://cloudflare-ipfs.com/ipfs/QmRo5A8rY5n8DCtfTk32maAXTXUjhy3B29bYH8XvhZqDU6)
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmbmmP6scbuuSw4jKZQG2qBdNVogNKctoYvMSQJknXK1xq)
+
+
+>Oluşturduğumuz dosyayı aşağıdaki komuyla çalıştıralım.
+    ansible-playbook docker_kurulum.yaml
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmdQnxWiYG5i68xyhRVp4E2x5yG3LPRsajbaZiUyo9q2Yo)
