@@ -41,3 +41,19 @@ Docker kurulumunu tamamladık şimdi kontrol amaçlı docker servisine bakalım.
 
 ![alt tag](https://cloudflare-ipfs.com/ipfs/QmcvTaVMZXZdxmP4Usu2SE3J1uRfz4df6RdFbQRSDBkbKi)
 
+
+Docker'ın sistemde doğru bir şekilde çalıştığına emin olduk artık diğer aşamalara geçebiliriz.
+
+>İlk olarak örnek bir Wordpress uygulamasını dockerize etme işlemini gerçekleştirelim. Bu aşamada işlemlerimizi Ansible Roles yapısı üzerinde yapacağız. 
+
+İşe Ansible galaxy proje yapımızı oluşturarak başlayalım.
+
+    ansible-galaxy init wordpress-nginx
+
+Bu bize aşağıdaki yapıyı oluşturacaktır.
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmT2jxjqBdEjLMscSuecRZrGVDfTJFTncfFUUmqPnZ5LbG)
+
+
+
+
