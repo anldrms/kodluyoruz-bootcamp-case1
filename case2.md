@@ -44,16 +44,27 @@ Docker kurulumunu tamamladık şimdi kontrol amaçlı docker servisine bakalım.
 
 Docker'ın sistemde doğru bir şekilde çalıştığına emin olduk artık diğer aşamalara geçebiliriz.
 
->İlk olarak örnek bir Wordpress uygulamasını dockerize etme işlemini gerçekleştirelim. Bu aşamada işlemlerimizi Ansible Roles yapısı üzerinde yapacağız. 
+>İlk olarak örnek bir Wordpress uygulamasını dockerize etme işlemini gerçekleştirelim. Bunu için bir playbook file oluşturacağız.
 
-İşe Ansible galaxy proje yapımızı oluşturarak başlayalım.
+    mkdir wordpressplaybook
+    cd wordpressplaybook/
+    vim playbook.yml
 
-    ansible-galaxy init wordpress-nginx
+![alt tag](https://cloudflare-ipfs.com/ipfs/Qmekz24HKYKKDwh2DN8Bg9axxNC21vntoVvrFBbrgbtGuv)
 
-Bu bize aşağıdaki yapıyı oluşturacaktır.
+>Ardından playbooku çalıştıralım.
 
-![alt tag](https://cloudflare-ipfs.com/ipfs/QmT2jxjqBdEjLMscSuecRZrGVDfTJFTncfFUUmqPnZ5LbG)
+    ansible-playbook playbook.yml
 
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmZhiDtCPbjgDfuTp6Ee65XULa1m3cU8UyjD5wY8wyNjV4)
 
+> Görüldüğü gibi playbook başarıyla çalıştı local sunucu adresimize giderek çalıştığını teyit edelim.
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmZoQ212yWnEUcoVrWYwxHTs3YDLoqHMtmhTagh6BfzQ4M)
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmWKd2eTwiQqEti4Wfy9x8Sa48Nps5ErNVTT3wsMuwM4au)
+
+> Harika! Bu aşamada uygulamayı başarılı bir şekilde Dockerize ettik. Bir sonraki aşamaya geçebiliriz.
+
+## Case 2.2 İlk adımda dockerize edilen uygulamanın Nginx üzerinden serve edilmesi ve gelen request içerisinde bootcamp=devops header'ı varsa "Hoşgeldin Devops" statik sayfasına yönlenebilmesi // Nginx kurulumu ve konfigürasyonu ansible ile yapılması  // “Hosgeldin DevOps" adlı bir statik sayfa oluşturularak, gelen request içerisinde bootcamp=devops header'ı varsa bu sayfaya yönlendirilmesi  <h2>
 
 
