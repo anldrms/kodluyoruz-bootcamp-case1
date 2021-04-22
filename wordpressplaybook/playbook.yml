@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+  remote_user: root
+  become: yes
+  tasks:
+    - name: Mysql ayaga kalkiyor
+      docker_container:
+        name: db_wordpress
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: wordpress
+          MYSQL_DATABASE: wordpress
+          MYSQL_USER: wordpress
+          MYSQL_PASSWORD: wordpress
+
+    - name: Worpdress ayaga kalkiyor
+      docker_container:
+        name: wordpress
+        image: wordpress
+        links:
+          - "db_wordpress:mysql"
+        ports:
+          - "80:80"
+        env:
+         WORDPRESS_DB_HOST: db:3306
+         WORDPRESS_DB_USER: wordpress
+         WORDPRESS_DB_PASSWORD: wordpress
+         WORDPRESS_DB_NAME: wordpress
+
