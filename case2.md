@@ -67,4 +67,30 @@ Docker'ın sistemde doğru bir şekilde çalıştığına emin olduk artık diğ
 
 ## Case 2.2 İlk adımda dockerize edilen uygulamanın Nginx üzerinden serve edilmesi ve gelen request içerisinde bootcamp=devops header'ı varsa "Hoşgeldin Devops" statik sayfasına yönlenebilmesi // Nginx kurulumu ve konfigürasyonu ansible ile yapılması  // “Hosgeldin DevOps" adlı bir statik sayfa oluşturularak, gelen request içerisinde bootcamp=devops header'ı varsa bu sayfaya yönlendirilmesi  <h2>
 
+> Bu aşamada Nginx kurulumu ve konfigürasyonu için gerekli ansible file'ı oluşturalım.
+
+    mkdir nginx-kurulum
+    cd nginx-kurulum/
+    vim playbook.yml
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmX6NbpP3Tcyx33wxdovs69zpcGwxyeQGv7JU91iyferC4)
+
+> Ardından basit bir index.html dosyası oluşturup içine "Hoşgeldin Devops" yazısı ekliyoruz.
+
+    vim index.html
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmSAvDXV2su3jeyxE1JZw3fYGbz3bTKu9bcmjB2uxMVZ2Y)
+
+> Son olarak playbooku çalıştıralım.
+    ansible-playbook playbook.yml
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmZEmkUXE4zrSEsJzaYAztT3zLmZ2DDoLnk3rfuVasYJJd)
+
+> Browserdan sayfayı kontrol edelim. 
+
+![alt tag](https://cloudflare-ipfs.com/ipfs/QmRd9V7m5s8H2jeMcnucnVJEcNgGksQkbqQdYiD9BnCEdJ)
+
+Sayfamız başarıyla geldi.
+
+
 
