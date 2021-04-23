@@ -92,5 +92,5 @@ Docker'ın sistemde doğru bir şekilde çalıştığına emin olduk artık diğ
 
 Sayfamız başarıyla geldi.
 
-
-
+**Gelen request içerisinde bootcamp=devops header'ı varsa bu sayfaya yönlendirilmesi**
+_Tamamlanamadı, tamamlanmalı, tamamlanacak..._
